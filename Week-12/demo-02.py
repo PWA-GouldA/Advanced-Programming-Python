@@ -12,7 +12,7 @@ def port_scan(port):
         return False
 
 
-server = 'localhost'
+server = 'a106-20'
 port_start = 1
 port_end = 80
 port_count = port_end - port_start + 1

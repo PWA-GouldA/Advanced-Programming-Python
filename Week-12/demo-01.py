@@ -6,16 +6,16 @@ start = time.time()
 spt = time.process_time()
 spc= time.perf_counter()
 
-server = 'www.hackthissite.org'
-port = 443
+hostname = 'a106-20'
+port = 80
 
-ip = socket.gethostbyname(server)
-print("HOST: {} IP: {} PORT: {}".format(server, ip, port))
+ip = socket.gethostbyname(hostname)
+print("HOST: {} IP: {} PORT: {}".format(hostname, ip, port))
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((ip, port))
 
-request = "GET / HTTP/1.1\nHost: " + server + "\n"
+request = "GET / HTTP/1.1\nHost: " + hostname + "\n"
 
 s.send(request.encode())
 result = s.recv(1024)

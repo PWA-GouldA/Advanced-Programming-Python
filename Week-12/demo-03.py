@@ -25,7 +25,7 @@ def threader():
         q.task_done()  # Called when task is completed
 
 
-server = 'localhost'
+server = 'a106-20'
 port_start = 1
 port_end = 65535
 port_count = port_end - port_start + 1
