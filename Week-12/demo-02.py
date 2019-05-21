@@ -14,7 +14,7 @@ def port_scan(port):
 
 server = 'a106-20'
 port_start = 1
-port_end = 80
+port_end = 443
 port_count = port_end - port_start + 1
 
 time_start = time.time()

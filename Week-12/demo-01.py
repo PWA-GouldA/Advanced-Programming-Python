@@ -2,12 +2,13 @@
 
 import socket
 import time
+
 start = time.time()
 spt = time.process_time()
-spc= time.perf_counter()
+spc = time.perf_counter()
 
-hostname = 'a106-20'
-port = 80
+hostname = 'a133-11'
+port = 8080
 
 ip = socket.gethostbyname(hostname)
 print("HOST: {} IP: {} PORT: {}".format(hostname, ip, port))
@@ -15,7 +16,7 @@ print("HOST: {} IP: {} PORT: {}".format(hostname, ip, port))
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((ip, port))
 
-request = "GET / HTTP/1.1\nHost: " + hostname + "\n"
+request = "GET / HTTP/2\nHost: " + hostname + "\n"
 
 s.send(request.encode())
 result = s.recv(1024)

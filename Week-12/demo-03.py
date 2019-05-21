@@ -25,7 +25,7 @@ def threader():
         q.task_done()  # Called when task is completed
 
 
-server = 'a106-20'
+server = 'a133-11'
 port_start = 1
 port_end = 65535
 port_count = port_end - port_start + 1
@@ -41,7 +41,7 @@ print("Scanning {} ports ({} to {})".format(port_count, port_start, port_end))
 
 q = Queue()  # It will create the queue and the threader
 
-for p in range(512):  # It defines the number of threads to run
+for p in range(4096):  # It defines the number of threads to run
     t = threading.Thread(target=threader)
     t.daemon = True  # This is consider thread as daemon, so if the main thread dies it will also die
     t.start()  # start the tread
